@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <h1>Escaleras y serpientes </h1><br>
+  <b><h1>Escaleras y serpientes </h1></b><br>
   <br><br>
   <h2>Lógica y Representación III</h2>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Escudo-UdeA.svg/827px-Escudo-UdeA.svg.png">
