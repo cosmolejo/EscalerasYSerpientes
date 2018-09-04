@@ -1,4 +1,17 @@
-# Coding Challenge 71: Minesweeper
+
+
+<p align="center">
+  <h1>Escaleras y serpientes </h1><br>
+  <br><br>
+  <h2>Lógica y Representación III</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Escudo-UdeA.svg/827px-Escudo-UdeA.svg.png">
+</p>
+
+## Por
+
+* Hernan Aguilar
+* Alejandro Mesa
+
 * Edited Videos for this challenge: https://www.youtube.com/watch?v=LFU5ZlrR21E&index=103&list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 * Live Stream: https://www.youtube.com/watch?v=zxR7KfVMGqk&index=96&list=PLRqwX-V7Uu6bxnFR6no70vlxxuxDEzflz
 
