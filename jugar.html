@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<title>JUGAR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+
+
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    vertical-align: center;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url('fondo3.jpg');
+    min-height: 75%;
+}
+.INSTRUCCIONES {
+    display: table-cell;
+    vertical-align: center;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <center>
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#VOLVER" onClick="location='index.html'" class="w3-button w3-block w3-black">VOLVER</a>
+    </div>
+</center>
+  </div>
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+
+
+<!-- Instrucciones Container -->
+<br><br>
+<div class="w3-container" id="INSTRUCCIONES">
+  <div class="w3-content" style="max-width:1000px" id="INSTRUCCIONES">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MODIFICA</span></h5>
+    
+      <h5><center><strong>PORCENTAJE DE ESCALERAS</strong></center></h5>
+        <center>
+        <select name="ESCALERAS" id="ESCALERAS" style="width: 200px">
+          <option value="1">1%</option>
+          <option value="2">2%</option>
+          <option value="3">3%</option>
+          <option value="4">4%</option>
+          <option value="5">5%</option>
+          <option value="6">6%</option>
+          <option value="7">7%</option>
+          <option value="8">8%</option>
+          <option value="9">9%</option>
+          <option value="10">10%</option>
+        </select>
+        </center>
+    
+      <h5><center><strong>PORCENTAJE DE SERPIENTES</strong></center></h5>
+        <center>
+        <select name="SERPIENTES" id="SERPIENTES" style="width: 200px">
+            <option value="1">1%</option>
+            <option value="2">2%</option>
+            <option value="3">3%</option>
+            <option value="4">4%</option>
+            <option value="5">5%</option>
+            <option value="6">6%</option>
+            <option value="7">7%</option>
+            <option value="8">8%</option>
+            <option value="9">9%</option>
+            <option value="10">10%</option>
+        </select>
+        </center>
+      
+      <h5><center><strong>TAMAÑO DEL TABLERO</strong></center></h5>
+        <center>
+        <select name="TABLERO" id="TABLERO" style="width: 200px">
+            <option value="8x8">8x8</option>
+            <option value="9x9">9x9</option>
+            <option value="10x10">10x10</option>
+            <option value="11x11">11x11</option>
+        </select>
+        </center>
+      
+      <h5><center><strong>MODO DE JUEGO</strong></center></h5>
+      <center>
+        <select name="MODALIDAD" style="width: 200px">
+            <option value="JUGADOR CONTRA JUGADOR">1V1</option>
+            <option value="JUGADOR CONTRA BOT">1VBOT</option>
+        </select>
+        </center>
+        <br>
+      <center><p><button class="w3-button w3-black" onClick="envie(); probemos()" type="submit" style="width: 200px">ENVIAR</button></p></center>
+
+    <br><br>
+    </div>
+</div>
+
+<script>
+  function probemos()
+  {
+    location='jugar2.html';
+  }
+  function envie()
+  {
+    var x = document.getElementById("TABLERO").value;
+    var y = document.getElementById("ESCALERAS").value;
+    var z = document.getElementById("SERPIENTES").value;
+    localStorage.tablero=x;
+    localStorage.escaleras=y;
+    localStorage.serpientes=z;
+    window.close();
+  }
+</script>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</body>
+</html>
