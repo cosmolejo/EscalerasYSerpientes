@@ -15,26 +15,26 @@ class nodoDoble {
         this.indicador = i;
     }
 
-    asignaLInd(l) {
+    set asignaLInd(l) {
         this.lInd = l;
     }
 
-    asignaLCons(l) {
+    set asignaLCons(l) {
         this.lCons = l;
     }
-    asignaLIzq(l){
+    set asignaLIzq(l){
         this.lIzq=l;
     }
-    retornaIndi() {
+    get retornaIndi() {
         return this.indicador;
     }
-    retornaLInd() {
+    get retornaLInd() {
         return this.lInd;
     }
-    retornaLCons() {
+    get retornaLCons() {
         return this.lCons;
     }
-    retornaLizq(){
+    get retornaLizq(){
         return this.lIzq;
     }
 }
