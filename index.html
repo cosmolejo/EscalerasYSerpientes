@@ -8,56 +8,58 @@
 <style>
 
 body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
 }
 .bgimg {
-    background-position: center;
-    background-size: cover;
-    background-image: url('fondo3.jpg');
-    min-height: 75%;
+  background-position: center;
+  background-size: cover;
+  background-image: url('fondo.jpg');
+  min-height: 75%;
 }
 .INSTRUCCIONES {
-    display: none;
+  display: none;
 }
+
 </style>
 <body>
 
-<!-- Links (sit on top) -->
+<!-- Parte superior de la ventana -->
+
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
-      <a href="#JUGAR" onClick="location='jugar.html'" class="w3-button w3-block w3-black">JUGAR</a>
+      <a href="#JUGAR" onClick="location='opciones.html'" class="w3-button w3-block w3-black">JUGAR</a>
     </div>
     <div class="w3-col s3">
       <a href="#CRÉDITOS" class="w3-button w3-block w3-black">CRÉDITOS</a>
     </div>
     <div class="w3-col s3">
-      <a href="#INSTRUCCIONES" class="w3-button w3-block w3-black">INSTRUCCIONES</a>
+      <a href="#INSTRUCCIONES" id="download" class="w3-button w3-block w3-black">INSTRUCCIONES</a>
     </div>
     <div class="w3-col s3">
-      <a href="https://github.com/cosmolejo/EscalerasYSerpientes" class="w3-button w3-block w3-black">CODIGO FUENTE</a>
+        <a href="https://github.com/cosmolejo/EscalerasYSerpientes" class="w3-button w3-block w3-black">CÓDIGO</a>
     </div>
-
   </div>
 </div>
 
-<!-- Header with image -->
+<!-- Encabezado utilizando imágen -->
+
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
     <span class="w3-tag">LÓGICA Y REPRESENTACIÓN III</span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:70px"><strong>ESCALERAS</strong>
-      <br><strong>&</strong><br><strong>SERPIENTES</strong></span>
-
+    <span class="w3-text-white" style="font-size:70px"><center><strong>ESCALERAS</strong><br><strong>&</strong><br><strong>SERPIENTES</strong></center></span>
   </div>
 </header>
 
-<!-- Add a background color and large text to the whole page -->
+<!-- Color de fondo y texto a toda la página -->
+
 <div class="w3-sand w3-grayscale w3-large">
 
-<!-- Créditos Container -->
+<!-- Contenedor créditos -->
+
 <div class="w3-container" id="CRÉDITOS">
   <div class="w3-content" style="max-width:700px">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CRÉDITOS</span></h5>
@@ -67,7 +69,8 @@ body, html {
   </div>
 </div>
 
-<!-- Instrucciones Container -->
+<!-- Contenedor instrucciones -->
+
 <div class="w3-container" id="INSTRUCCIONES">
   <div class="w3-content" style="max-width:1000px">
     <br>
@@ -80,64 +83,58 @@ body, html {
         <div class="w3-col s6 tablink">JUEGO</div>
       </a>
     </div>
-
     <div id="REGLAS" class="w3-container INSTRUCCIONES w3-padding-48 w3-card">
       <h5><center><strong>MOVIMIENTOS</strong></center></h5>
       <p class="w3-text-grey"><center>LOS MOVIMIENTOS ENTRE CASILLAS SON DADOS POR EL LANZAMIENTO DE UN DADO (1-6).</center></p><br>
-    
       <h5><center><strong>OBJETIVO</strong></center></h5>
       <p class="w3-text-grey"><center>EL GANADOR SERÁ EL PRIMERO EN LLEGAR A LA POSICIÓN FINAL DEL TABLERO.</center></p><br>
-    
       <h5><center><strong>DOBLE MOVIMIENTO</strong></center></h5>
-      <p class="w3-text-grey"><center>SI UN JUGADOR OBTIENE EL NÚMERO 6, PODRÁ LANZAR UNA SEGUNDA VEZ EL DADO.</center></p><br>
-    
+      <p class="w3-text-grey"><center>SI UN JUGADOR OBTIENE EL NÚMERO 6, PODRÁ LANZAR N VECES EL DADO.</center></p><br>
       <h5><center><strong>SIN MOVIMIENTO</strong></center></h5>
       <p class="w3-text-grey"><center>SI EL NÚMERO OBTENIDO ES MAYOR AL NÚMERO DE CASILLAS RESTANTES, NO EXISTE MOVIMIENTO.</center></p><br>
-
       <h5><center><strong>ESCALERAS</strong></center></h5>
       <p class="w3-text-grey"><center>LA ESCALERA SERVIRÁ PARA AVANZAR DE POSICIÓN, UNA VEZ SEA TOCADA SU PARTE INFERIOR.</center></p><br>
-
       <h5><center><strong>SERPIENTES</strong></center></h5>
       <p class="w3-text-grey"><center>LA SERPIENTE SERVIRÁ PARA RETROCEDER DE POSICIÓN, UNA VEZ SEA TOCADA SU PARTE SUPERIOR.</center></p><br>
     </div>
-
     <div id="JUEGO" class="w3-container INSTRUCCIONES w3-padding-48 w3-card">
       <h5><center><strong>CASILLAS</strong></center></h5>
       <p class="w3-text-grey"><center>SE PODRÁ ELEGIR UN TAMAÑO DE 8X8, 9X9 O 10X10.</center></p><br>
-    
       <h5><center><strong>ESCALERAS</strong></center></h5>
       <p class="w3-text-grey"><center>SE PODRÁ ELEGIR A LO SUMO UN 10% DE ESCALERAS EN EL TABLERO.</center></p><br>
-    
       <h5><center><strong>SERPIENTES</strong></center></h5>
       <p class="w3-text-grey"><center>SE PODRÁ ELEGIR A LO SUMO UN 10% DE SERPIENTES EN EL TABLERO.</center></p><br>
-    
       <h5><center><strong>MODALIDADES</strong></center></h5>
       <p class="w3-text-grey"><center>EXISTIRÁN DOS MODALIDADES: JUGADOR CONTRA JUGADOR & JUGADOR CONTRA BOT.</center></p><br>
     </div> 
-
     <br><br>
     </div>
     </div>
 </div>
 
-
 <script>
-// Tabbed INSTRUCCIONES
-function openINSTRUCCIONES(evt, INSTRUCCIONESName) {
+
+// Tabular las instrucciones
+
+function openINSTRUCCIONES(evt, INSTRUCCIONESName) 
+{
   var i, x, tablinks;
   x = document.getElementsByClassName("INSTRUCCIONES");
-  for (i = 0; i < x.length; i++) {
+  for (i = 0; i < x.length; i++) 
+  {
      x[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
+  for (i = 0; i < x.length; i++) 
+  {
      tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
   }
   document.getElementById(INSTRUCCIONESName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
+
 document.getElementById("myLink").click();
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
 </body>
 </html>

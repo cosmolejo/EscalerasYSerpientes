@@ -1,10 +1,11 @@
--Modos de juego contra bot y contra jugador.
--Hacer los dados.
 -Hacer el funcionamiento del programa por medio de listas.
+-Documentación por jsdoc.
 
 
 
-//Terminar de documentar el código
-//Preguntar acerca de la documentación. |Manual técnico y Manual de usuario|.
+-MANUAL DE USUARIO
+-Terminar de documentar el código (También ver qué se puede eliminar para que quede más limpio).
 
 
+//Dos fichas para cada jugador?? -PREGUNTAR ANDREA (MONITORA)-
+//Revisar de nuevo los porcentajes?? -VER POR QUÉ FALLA LA GENERACIÓN.
