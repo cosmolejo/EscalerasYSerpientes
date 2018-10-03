@@ -1,60 +1,74 @@
-// A player
-class Player {
 
-  // Call a reset function to initialize
-  constructor() {
+// Clase jugador.
+
+class Player {
+  
+  // Crear un nuevo jugador.
+
+  constructor() 
+  {
     this.reset();
   }
 
-  // Reset variables
-  reset() {
-    this.spot = -1; // Where I am now
-    this.next = -1; // Where I'm going
-    this.roll = -1; // What was my latest roll
-  }
+  // Reiniciar las variables.
+  
+  reset() 
+  {
+    this.spot = -1; // Posición actual.
+    this.next = -1; // Posición posterior.
+    this.roll = -1; // Posición anterior.
+  }  
+  
+  // Movimiento entre 1 y 6.
 
-  // random die roll 1 - 6
-  rollDie() {
+  rollDie() 
+  {
     this.roll = floor(random(1, 7));
     this.next = this.spot + this.roll;
   }
+  
+  // Actualizar posición a la siguiente.
 
-  // Update spot to next
-  move() {
+  move() 
+  {
     this.spot = this.next;
   }
+  
+  // ¿Posición actual es escalera o serpiente?
 
-  // Highlight the tiles ahead
-  showPreview() {
-    let start = max(0, this.spot);
-    let end = min(this.next, tiles.length - 1);
-    for (let i = start; i <= end; i++) {
-      tiles[i].highlight();
-    }
-
-  }
-
-  // Is player on a Snake or Ladder?
-  isSnadder() {
+  isSnadder() 
+  {
     let tile = tiles[this.spot];
     return (tile && tile.snadder !== 0);
   }
+  
+  // Moverse si es escalera o serpiente.
 
-  // Move according to the Snake or Ladder
-  moveSnadder() {
+  moveSnadder() 
+  {
     let tile = tiles[this.spot];
     this.spot += tile.snadder;
   }
 
+  // Mostrar jugador en la baldosa actual.
 
-  // Display on the current tile
-  show() {
+  show() 
+  {
     let current = tiles[this.spot];
-    // Just get out of here if it's not a valid tile
     if (!current) return;
-    fill(255);
+    fill(color(204, 153, 255));
     stroke(0);
     let center = current.getCenter();
-    ellipse(center[0], center[1], 16);
+    ellipse(center[0], center[1], 26);
+  }
+
+  show2() 
+  {
+    let current = tiles[this.spot];
+    if (!current) return;
+    fill(color(255, 255, 0));
+    stroke(0);
+    let center = current.getCenter();
+    ellipse(center[0], center[1], 26);
   }
 }
