@@ -60,4 +60,14 @@ class lista {
         }
         //console.log(i);
     }
+    retornaNodo(i) {
+        let j=1;
+        let p = new nodoDoble();
+        p = this.primerNodo();
+        while (!this.finDeRecorrido(p) && j<i) {
+            p = p.retornaLCons();
+            i++;
+        }
+        return p;
+    }
 }

@@ -99,7 +99,7 @@ function setup() {
   e = parseInt(localStorage.escaleras);
   s = parseInt(localStorage.serpientes);
 
-  console.log(e, s);
+  
 
   // Cálculo del promedio.
 
@@ -110,16 +110,17 @@ function setup() {
 
   // Tomar serpientes de manera aleatoria.
 
-  for (let i = 0; i < serpientes; i++) {
+  for (let i = 1; i <= serpientes; i++) {
     let index = floor(random(cols, tiles.length - 1));
     tiles[index].snadder = -1 * floor(random(index % cols, index - 1));
   }
 
   // Tomar escaleras de manera aleatoria.
 
-  for (let i = 0; i < escaleras; i++) {
+  for (let i = 1; i <= escaleras; i++) {
     let index = floor(random(0, tiles.length - cols));
     tiles[index].snadder = floor(random(cols - (index % cols), tiles.length - index - 1));
+   
   }
 
   // Nuevo jugador.
