@@ -204,7 +204,7 @@ function lanzar3() {
         if (player3.roll == 6) {
             document.getElementById('63').style.display = 'unset';
             turnosV = 2;
-            setTimeout(turnos2, 3000);
+            setTimeout(turnos2, 500);
         } else {
             turnosV = 1;
             if (player3.roll == 1) {
@@ -222,7 +222,7 @@ function lanzar3() {
             if (player3.roll == 5) {
                 document.getElementById('53').style.display = 'unset';
             }
-            setTimeout(lanzar4, 3000);
+            setTimeout(lanzar4, 500);
         }
         ocultaDados4();
     } else {
@@ -247,9 +247,9 @@ function lanzar3() {
         if (player3.roll == 6) {
             document.getElementById('63').style.display = 'unset';
             turnosV = 2;
-            setTimeout(turnos2, 3000)
+            setTimeout(turnos2, 500)
         }
-        setTimeout(lanzar4, 3000);
+        setTimeout(lanzar4, 500);
     }
     if (player3.l.retornaIndex(player3.pos) + player3.roll == tiles.length - 1) {
         alert("El jugador 3 ha ganado.");
