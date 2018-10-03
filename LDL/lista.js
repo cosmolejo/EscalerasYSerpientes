@@ -54,7 +54,8 @@ class lista {
         let p = new nodoDoble();
         p = this.primerNodo();
         while (!this.finDeRecorrido(p)) {
-            console.log(p.retornaIndi());
+            //console.log(p.retornaIndi());
+            console.log(p);
             p = p.retornaLCons();
             i++;
         }
@@ -65,8 +66,9 @@ class lista {
         let p = new nodoDoble();
         p = this.primerNodo();
         while (!this.finDeRecorrido(p) && j<i) {
+            j++;
             p = p.retornaLCons();
-            i++;
+            
         }
         return p;
     }

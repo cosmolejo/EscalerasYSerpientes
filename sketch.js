@@ -61,8 +61,6 @@ function setup() {
   //Creacción del modelo Lista del juego
 
   Lista = new lista();
-  nodo = new nodoDoble();
-
 
   // Tamaño de las baldosas, filas y columnas.
 
@@ -99,7 +97,7 @@ function setup() {
   e = parseInt(localStorage.escaleras);
   s = parseInt(localStorage.serpientes);
 
-  
+
 
   // Cálculo del promedio.
 
@@ -112,16 +110,30 @@ function setup() {
 
   for (let i = 1; i <= serpientes; i++) {
     let index = floor(random(cols, tiles.length - 1));
-    tiles[index].snadder = -1 * floor(random(index % cols, index - 1));
+    let destino = -1 * floor(random(index % cols, index - 1))
+    tiles[index].snadder = destino;
+
+    
+    n = Lista.retornaNodo(index);
+    n.asignaIndi(0);
+    n.asignaLInd(Lista.retornaNodo(destino));
+    
   }
 
   // Tomar escaleras de manera aleatoria.
 
   for (let i = 1; i <= escaleras; i++) {
     let index = floor(random(0, tiles.length - cols));
-    tiles[index].snadder = floor(random(cols - (index % cols), tiles.length - index - 1));
-   
+    let destino= floor(random(cols - (index % cols), tiles.length - index - 1))
+    tiles[index].snadder = destino;
+
+
+    n = Lista.retornaNodo(index);
+    n.asignaIndi(1);
+    n.asignaLInd(Lista.retornaNodo(destino));
   }
+
+  Lista.recorre();
 
   // Nuevo jugador.
 
