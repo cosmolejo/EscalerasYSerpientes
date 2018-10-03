@@ -128,14 +128,10 @@ function lanzar() {
             turnosV = 1;
         }
     }
-    if (player.spot + player.roll == tiles.length - 1) {
+    if (player.l.retornaIndex(player.pos) + player.roll == tiles.length - 1) {
         alert("El jugador 1 ha ganado.");
         location = 'opciones.html';
-    }/*
-    if (player.l. + player.roll == tiles.length - 1) {
-        alert("El jugador 1 ha ganado.");
-        location = 'opciones.html';
-    }*/
+    }
 }
 
 // Mover el jugador 2 por medio del botón 2 (Modalidad 1V1).
@@ -193,7 +189,7 @@ function lanzar2() {
             turnosV = 2;
         }
     }
-    if (player2.spot + player2.roll == tiles.length - 1) {
+    if (player2.l.retornaIndex(player2.pos) + player2.roll == tiles.length - 1) {
         alert("El jugador 2 ha ganado.");
         location = 'opciones.html';
     }
@@ -255,10 +251,11 @@ function lanzar3() {
         }
         setTimeout(lanzar4, 3000);
     }
-    if (player3.spot + player3.roll == tiles.length - 1) {
-        alert("El jugador 1 ha ganado.");
+    if (player3.l.retornaIndex(player3.pos) + player3.roll == tiles.length - 1) {
+        alert("El jugador 3 ha ganado.");
         location = 'opciones.html';
     }
+    
 }
 
 // VERIFICAR EL DADO 6 CON EL TIMER
@@ -318,7 +315,8 @@ function lanzar4() {
         }
     }
     setTimeout(turnos2, 500);
-    if (playerbot.spot + playerbot.roll == tiles.length - 1) {
+    
+    if (playerbot.l.retornaIndex(playerbot.pos) + playerbot.roll == tiles.length - 1) {
         alert("El bot ha ganado.");
         location = 'opciones.html';
     }
