@@ -308,7 +308,7 @@ function draw()
     // Dibuja el jugador.
   
     player3.show();
-    playerbot.show2();
+    playerbot.show();
 
     // Organiza los turnos.
     
