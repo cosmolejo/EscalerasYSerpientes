@@ -5,36 +5,36 @@
 class nodoDoble {
 
     constructor() {
-        this.indicador = null;  //indicador del tipo de casilla
-        this.lInd = null;       // liga del indicador
-        this.lCons = null;      // liga consecutiva / Ld
-        this.lIzq = null;       // liga izquierda
+        this.indicador = null; //indicador del tipo de casilla
+        this.lInd = null; // liga del indicador
+        this.lCons = null; // liga consecutiva / Ld
+        this.lIzq = null; // liga izquierda
     }
 
-    set asignaIndi(i) {
+    asignaIndi(i) {
         this.indicador = i;
     }
 
-    set asignaLInd(l) {
+    asignaLInd(l) {
         this.lInd = l;
     }
 
-    set asignaLCons(l) {
+    asignaLCons(l) {
         this.lCons = l;
     }
-    set asignaLIzq(l){
-        this.lIzq=l;
+    asignaLIzq(l) {
+        this.lIzq = l;
     }
-    get retornaIndi() {
+    retornaIndi() {
         return this.indicador;
     }
-    get retornaLInd() {
+    retornaLInd() {
         return this.lInd;
     }
-    get retornaLCons() {
+    retornaLCons() {
         return this.lCons;
     }
-    get retornaLizq(){
+    retornaLizq() {
         return this.lIzq;
     }
 }

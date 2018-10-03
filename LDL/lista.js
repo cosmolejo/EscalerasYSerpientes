@@ -7,14 +7,15 @@ class lista {
 
     constructor() {
         this.primero = new nodoDoble();
-        this.ultimo = new nodoDoble();
+        this.primero.asignaLCons(this.primero);
+        this.primero.asignaLIzq(this.primero);
     }
 
     primerNodo() {
-        return this.primero;
+        return this.primero.retornaLCons();
     }
-    ultimoNodo() {
-        return this.ultimo;
+    cabeza() {
+        return this.primero;
     }
 
     esVacio() {
@@ -22,7 +23,7 @@ class lista {
     }
 
     finDeRecorrido(x) {
-        return x == null;
+        return x == this.primero;
     }
 
     insertaNodo(d) { //inserta siempre al final
@@ -31,12 +32,32 @@ class lista {
         this.conectar(x);
     }
     conectar(x) {
-        this.ultimo.asignaLCons(x);
-        x.asignaLIzq(this.ultimo);
-        this.ultimo = x;
+        if (this.primero.retornaLCons() == this.primero) {
+            this.primero.asignaLCons(x);
+            this.primero.asignaLIzq(x);
+            x.asignaLCons(this.primero);
+            x.asignaLIzq(this.primero);
+        }
+        this.primero.retornaLizq().asignaLCons(x);
+        x.asignaLIzq(this.primero.retornaLizq());
+        x.asignaLCons(this.primero);
+        this.primero.asignaLIzq(x);
+
+
     }
     asignaSnadder(x, y, d) {
         x.asignaIndi(d);
         x.asignaLInd(y);
+    }
+    recorre() {
+        let i=0;
+        let p = new nodoDoble();
+        p = this.primerNodo();
+        while (!this.finDeRecorrido(p)) {
+            console.log(p.retornaIndi());
+            p = p.retornaLCons();
+            i++;
+        }
+        //console.log(i);
     }
 }
