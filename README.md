@@ -2,8 +2,8 @@
 
 
 
-1. INTRODUCCIÓN
-=================
+# 1. INTRODUCCIÓN
+
 
 Como práctica en el curso de lógica y representación III, y además, como
 ejercicio para poder aplicar conocimientos relacionados al curso de
@@ -21,8 +21,8 @@ ayudarían más adelante a poder realizar el entorno gráfico del tablero
 de juego. Sin embargo, el proyecto quedó diseñado teniendo en cuenta
 todas las observaciones hechas en el enunciado de la práctica.
 
-2. FUNCIONALIDADES
-==================
+# 2. FUNCIONALIDADES
+
 
 En el trabajo, se utilizan diferentes scripts para html que ayudan a la
 parte visual, para que sea un entorno más amigable con el usuario, así
@@ -30,8 +30,8 @@ mismo para que luzca mejor estéticamente, y sea una página entendible.
 Así mismo, se utilizan diferentes comandos ya existentes en html para la
 creación de tablas, comboBox, botones, entre otros.
 
-3. ASPECTOS FUNDAMENTALES
-=========================
+# 3. ASPECTOS FUNDAMENTALES
+
 
 Para el desarrollo del proyecto, el entorno gráfico jugó un papel
 fundamental para el funcionamiento del mismo. En el programa, se pensó
@@ -39,8 +39,8 @@ en 3 páginas diferentes para cumplir todos los problemas planteados,
 estas son: interfaz de inicio (index.html), interfaz de opciones
 (opciones.html) e interfaz de juego (jugar.html).
 
-3.1. INTERFAZ DE INICIO
-=======================
+## 3.1. INTERFAZ DE INICIO
+
 
 En este, como su nombre lo dice, se introduce con el nombre del juego,
 así como una barra superior en la que aparecen diferentes opciones que
@@ -85,8 +85,8 @@ Además, también se puede encontrar el markdown donde estará la
 presentación formal del proyecto, así como los repositorios que fueron
 de ayuda.
 
-3.2. INTERFAZ DE OPCIONES
-=========================
+## 3.2. INTERFAZ DE OPCIONES
+
 
 Finalmente, en la parte superior del index, tenemos la opción de
 “JUGAR”. En este caso, se nos presentará una interfaz donde se podrá
@@ -114,8 +114,8 @@ En la parte superior de la pantalla de esta interfaz, se tienen una
 opción, la cual es “VOLVER”. Como su nombre lo indica, su función es
 volverse a la página principal (index.html).
 
-3.3. INTERFAZ DE JUEGO
-======================
+## 3.3. INTERFAZ DE JUEGO
+
 
 Esta interfaz, será especialmente diseñada por la de opciones. En esta,
 se mostrará el tablero, los jugadores (con su respectivo color) y se
@@ -183,11 +183,11 @@ tablero de juego. Como se puede notar, sólo hace aparición el tablero de
 juego (puesto que es un requisito de la práctica), por lo que no se
 mirarán ninguna ficha, así como ningún dado o color de figura.
 
-4. EXCEPCIONES
-==============
+# 4. EXCEPCIONES
+
 
 Para las excepciones, se trabajó sobre todo en el ámbito de la interfaz de juego, ya que estas son:
-===================================================================================================
+
 
 -   ¿El jugador 1 ganó?
 
