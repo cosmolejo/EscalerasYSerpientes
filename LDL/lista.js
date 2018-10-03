@@ -50,26 +50,50 @@ class lista {
         x.asignaLInd(y);
     }
     recorre() {
-        let i=0;
+        let i = 0;
         let p = new nodoDoble();
         p = this.primerNodo();
         while (!this.finDeRecorrido(p)) {
-            //console.log(p.retornaIndi());
+            
             console.log(p);
             p = p.retornaLCons();
             i++;
         }
-        //console.log(i);
+       
     }
     retornaNodo(i) {
-        let j=1;
+        let j = 1;
         let p = new nodoDoble();
         p = this.primerNodo();
-        while (!this.finDeRecorrido(p) && j<i) {
+        while (!this.finDeRecorrido(p) && j < i) {
             j++;
             p = p.retornaLCons();
-            
+
         }
         return p;
+    }
+    retornaIndex(n) {
+        let j = 1;
+        let p = new nodoDoble();
+        p = this.primerNodo();
+        while (!this.finDeRecorrido(p) && n != p) {
+            j++;
+            p = p.retornaLCons();
+
+        }
+        return j;
+    }
+    verificaSnadder(n) {
+
+        if (n.retornaIndi() != null) {
+            return n.retornaLInd();
+        }
+
+    }
+    avanzar(i, n) {
+        for (j=1; j<=i; j++){
+            n=n.retornaLCons();
+        }
+        return n;
     }
 }

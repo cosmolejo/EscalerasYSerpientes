@@ -117,7 +117,7 @@ function setup() {
     n = Lista.retornaNodo(index);
     n.asignaIndi(0);
     n.asignaLInd(Lista.retornaNodo(destino));
-    
+    console.log(index,Lista.retornaIndex(n));
   }
 
   // Tomar escaleras de manera aleatoria.
@@ -133,8 +133,7 @@ function setup() {
     n.asignaLInd(Lista.retornaNodo(destino));
   }
 
-  Lista.recorre();
-
+  
   // Nuevo jugador.
 
   if (localStorage.modalidad == "1V1") {

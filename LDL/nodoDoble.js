@@ -8,7 +8,7 @@ class nodoDoble {
         this.indicador = null; //indicador del tipo de casilla
         this.lInd = null; // liga del indicador
         this.lCons = null; // liga consecutiva / Ld
-        this.lIzq = null; // liga izquierda
+        
     }
 
     asignaIndi(i) {
@@ -22,9 +22,7 @@ class nodoDoble {
     asignaLCons(l) {
         this.lCons = l;
     }
-    asignaLIzq(l) {
-        this.lIzq = l;
-    }
+    
     retornaIndi() {
         return this.indicador;
     }
@@ -34,7 +32,5 @@ class nodoDoble {
     retornaLCons() {
         return this.lCons;
     }
-    retornaLizq() {
-        return this.lIzq;
-    }
+    
 }
