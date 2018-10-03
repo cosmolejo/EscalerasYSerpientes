@@ -3,7 +3,7 @@
 
 
 1. INTRODUCCIÓN
-===============
+=================
 
 Como práctica en el curso de lógica y representación III, y además, como
 ejercicio para poder aplicar conocimientos relacionados al curso de
