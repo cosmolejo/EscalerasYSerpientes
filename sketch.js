@@ -147,7 +147,7 @@ function draw()
 
     if (state === ROLL_STATE) 
     {
-      player.rollDie();
+      player.rollDice();
       state = MOVE_STATE;
     
       // Moviendo el jugador 1.
@@ -182,7 +182,7 @@ function draw()
 
     if (state2 === ROLL_STATE_P2) 
     {
-      player2.rollDie();
+      player2.rollDice();
       state2 = MOVE_STATE_P2;
     
       // Moviendo el jugador 2.
@@ -232,7 +232,7 @@ function draw()
 
     if (state3 === ROLL_STATE_P3) 
     {
-      player3.rollDie();
+      player3.rollDice();
       state3 = MOVE_STATE_P3;
     
       // Moviendo el jugador 1.
@@ -267,7 +267,7 @@ function draw()
 
     if (statebot === ROLL_STATE_BOT) 
     {
-      playerbot.rollDie();
+      playerbot.rollDice();
       statebot = MOVE_STATE_BOT;
     
       // Moviendo el bot.

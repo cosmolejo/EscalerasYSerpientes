@@ -3,30 +3,40 @@
  * 
  */
 
- class lista{
+class lista {
 
-    constructor(){
-        this.primero=null;
-        this.ultimo=this.primero;
+    constructor() {
+        this.primero = new nodoDoble();
+        this.ultimo = new nodoDoble();
     }
 
-    primerNodo(){
+    primerNodo() {
         return primero;
     }
-    ultimoNodo(){
+    ultimoNodo() {
         return this.ultimo;
     }
 
-    esVacio(){
-        return this.primero==null;
+    esVacio() {
+        return this.primero.retornaLCons == null;
     }
 
-    finDeRecorrido(x){
+    finDeRecorrido(x) {
         return x == null;
     }
 
-    insertaNodo(n){  //inserta siempre al final
-        
+    insertaNodo(d) { //inserta siempre al final
+        var x = new nodoDoble();
+        x.asignaIndi(d);
+        this.conectar(x);
     }
-
- }
+    conectar(x) {
+        this.ultimo.asignaLCons(x);
+        x.asignaLIzq(this.ultimo);
+        this.ultimo = x;
+    }
+    asignaSnadder(x, y, d) {
+        x.asignaIndi(d);
+        x.asignaLInd(y);
+    }
+}

@@ -21,7 +21,7 @@ class Player {
   
   // Movimiento entre 1 y 6.
 
-  rollDie() 
+  rollDice() 
   {
     this.roll = floor(random(1, 7));
     this.next = this.spot + this.roll;

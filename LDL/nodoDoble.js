@@ -11,7 +11,7 @@ class nodoDoble {
         this.lIzq = null;       // liga izquierda
     }
 
-    asignaIndi(i) {
+    set asignaIndi(i) {
         this.indicador = i;
     }
 
