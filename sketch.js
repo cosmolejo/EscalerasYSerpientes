@@ -109,7 +109,7 @@ function setup() {
 
   // Tomar serpientes de manera aleatoria.
 
-  for (let i = 1; i <= serpientes; i++) {
+  for (let i = 0; i <= serpientes; i++) {
     let index = floor(random(cols, tiles.length - 1));
     let destino = -1 * floor(random(index % cols, index - 1))
     tiles[index].snadder = destino;
@@ -123,7 +123,7 @@ function setup() {
 
   // Tomar escaleras de manera aleatoria.
 
-  for (let i = 1; i <= escaleras; i++) {
+  for (let i = 0; i <= escaleras; i++) {
     let index = 1+floor(random(0, tiles.length - cols));
     let destino = floor(random(cols - (index % cols), tiles.length - index - 2));
     tiles[index].snadder = destino;
