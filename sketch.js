@@ -32,7 +32,8 @@ let statebot = ROLL_STATE_BOT; // Estado del juego.
 
 let tiles = [];          // Vector con las baldosas.
 let player;              // Jugador con el que basarse.
-let rolls = [];          // Vector para calcular el promedio.
+let player2;
+let  Lista;       // Variable para el modelo
 let index = 0;           // Posición para crear una escalera o serpiente.
 let averageRolls = 0;    // Promedio a tener en cuenta.
 let avgP;                // Variable auxiliar.
@@ -47,8 +48,10 @@ function setup()
   if(localStorage.tablero=="10x10") { createCanvas(600, 600); t=100; }
   if(localStorage.tablero=="11x11") { createCanvas(660, 660); t=121; }
 
-  avgP = createP('');
-  rolls[index] = 0;
+  //Creacción del modelo Lista del juego
+
+  Lista= new lista();
+  
 
   // Tamaño de las baldosas, filas y columnas.
 
@@ -56,7 +59,7 @@ function setup()
   let cols = width / resolution;
   let rows = height / resolution;
 
-  // Crear todas las baldosas.
+  // Crear todas las baldosas y sus nodos equivalentes
 
   let x = 0;
   let y = (rows - 1) * resolution;
@@ -75,6 +78,7 @@ function setup()
       y -= resolution;
     }
   }
+  
 
   // Manejo del promedio de escaleras y serpientes.
 
@@ -218,7 +222,7 @@ function draw()
     // Dibuja los jugadores.
   
     player.show();
-    player2.show2();
+    player2.show();
 
     // Organiza los turnos.
 

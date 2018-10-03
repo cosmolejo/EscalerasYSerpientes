@@ -16,7 +16,7 @@ class Player {
   {
     this.spot = 0; // Posición actual.
     this.next = 0; // Posición posterior.
-    this.roll = 0; // Posición anterior.
+    this.roll = 0; // valor del dado.
   }  
   
   // Movimiento entre 1 y 6.

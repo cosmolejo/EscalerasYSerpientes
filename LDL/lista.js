@@ -11,7 +11,7 @@ class lista {
     }
 
     primerNodo() {
-        return primero;
+        return this.primero;
     }
     ultimoNodo() {
         return this.ultimo;
