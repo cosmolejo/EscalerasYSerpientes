@@ -59,7 +59,7 @@ class lista {
             p = p.retornaLCons();
             i++;
         }
-       
+        
     }
     retornaNodo(i) {
         let j = 1;
@@ -87,11 +87,14 @@ class lista {
 
         if (n.retornaIndi() != null) {
             return n.retornaLInd();
+        }else{
+            return n;
         }
 
     }
     avanzar(i, n) {
-        for (j=1; j<=i; j++){
+
+        for (let j=1; j<=i; j++){
             n=n.retornaLCons();
         }
         return n;

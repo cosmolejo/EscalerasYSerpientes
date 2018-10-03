@@ -5,9 +5,11 @@ class Player {
   
   // Crear un nuevo jugador.
 
-  constructor() 
+  constructor(obj) 
   {
     this.reset();
+    this.l=obj;
+    this.pos=obj.primerNodo();
   }
 
   // Reiniciar las variables.
@@ -32,6 +34,7 @@ class Player {
   move() 
   {
     this.spot = this.next;
+    this.pos=this.l.avanzar(this.roll,this.pos);
   }
   
   // ¿Posición actual es escalera o serpiente?
@@ -39,7 +42,9 @@ class Player {
   isSnadder() 
   {
     let tile = tiles[this.spot];
+    this.pos=this.l.verificaSnadder(this.l.retornaNodo(tile.index));
     return (tile && tile.snadder !== 0);
+    
   }
   
   // Moverse si es escalera o serpiente.

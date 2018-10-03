@@ -61,6 +61,7 @@ function setup() {
   //Creacción del modelo Lista del juego
 
   Lista = new lista();
+  nodo = Lista.primerNodo();
 
   // Tamaño de las baldosas, filas y columnas.
 
@@ -113,18 +114,18 @@ function setup() {
     let destino = -1 * floor(random(index % cols, index - 1))
     tiles[index].snadder = destino;
 
-    
+
     n = Lista.retornaNodo(index);
     n.asignaIndi(0);
     n.asignaLInd(Lista.retornaNodo(destino));
-    console.log(index,Lista.retornaIndex(n));
+    console.log(index, Lista.retornaIndex(n));
   }
 
   // Tomar escaleras de manera aleatoria.
 
   for (let i = 1; i <= escaleras; i++) {
-    let index = floor(random(0, tiles.length - cols));
-    let destino= floor(random(cols - (index % cols), tiles.length - index - 1))
+    let index = 1+floor(random(0, tiles.length - cols));
+    let destino = floor(random(cols - (index % cols), tiles.length - index - 2));
     tiles[index].snadder = destino;
 
 
@@ -133,15 +134,15 @@ function setup() {
     n.asignaLInd(Lista.retornaNodo(destino));
   }
 
-  
+
   // Nuevo jugador.
 
   if (localStorage.modalidad == "1V1") {
-    player = new Player();
-    player2 = new Player();
+    player = new Player(Lista);
+    player2 = new Player(Lista);
   } else {
-    player3 = new Player();
-    playerbot = new Player();
+    player3 = new Player(Lista);
+    playerbot = new Player(Lista);
   }
 
 }
