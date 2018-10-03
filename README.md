@@ -1,3 +1,5 @@
+# (Nota: la funcion de guardar el tablero, solo funciona al ejecutar el programa de modo local)
+
 ![](img/1.png)
 
 
