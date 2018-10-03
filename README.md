@@ -1,5 +1,4 @@
-![](img/1.png){width="6.270833333333333in"
-height="4.947916666666667in"}
+![](img/1.png)
 
 
 
@@ -47,8 +46,7 @@ En este, como su nombre lo dice, se introduce con el nombre del juego,
 así como una barra superior en la que aparecen diferentes opciones que
 pueden ser utilizadas.
 
-![](img/2.png){width="8.024024496937884in"
-height="3.4739588801399823in"}
+![](img/2.png)
 
 Como se puede apreciar en la imagen, en la parte inicial del index,
 aparece una barra con las opciones de “JUGAR”, “CRÉDITOS”,
@@ -57,8 +55,7 @@ diferentes acciones dentro del proyecto. Cuando se presiona la opción de
 “CRÉDITOS” se dirigirá a un apartado que se encuentra debajo de esta
 presentación. Tal que es así:
 
-![](img/3.png){width="6.270833333333333in"
-height="1.6944444444444444in"}
+![](img/3.png)
 
 En este caso, esta parte es meramente informativa. Tiene la única
 función de dar créditos a los creadores del proyecto. Si presionamos
@@ -66,17 +63,15 @@ función de dar créditos a los creadores del proyecto. Si presionamos
 “CRÉDITOS”. En este caso, las instrucciones son presentadas mediante una
 tabla que se divide en dos secciones, tal que:
 
-![](img/4.png){width="6.270833333333333in"
-height="1.3194444444444444in"}
+![](img/4.png)
 
 Como podemos ver, se divide en “REGLAS” y “JUEGO”. Cada una de estas son
 tablas que representan las instrucciones presentadas en el enunciado de
 la práctica. Éstas, contienen los siguientes ítems:
-![](img5.png){width="6.270833333333333in"
-height="5.555555555555555in"}
 
-![](img/6.png){width="6.270833333333333in"
-height="4.055555555555555in"}
+![](img5.png)
+
+![](img/6.png)
 
 Como se puede ver, tanto “REGLAS” como “JUEGO” son pestañas meramente
 informativas. En este caso, este es el manual de usuario utilizado para
@@ -98,28 +93,22 @@ Finalmente, en la parte superior del index, tenemos la opción de
 decidir la generación del tablero al gusto del jugador. La presentación,
 en este caso, se compone de la siguiente manera:
 
-![](img/7.png){width="6.270833333333333in"
-height="4.152777777777778in"}
-
+![](img/7.png)
 Como se puede observar, existe la posibilidad de elegir porcentaje tanto
 de serpientes como escaleras, así como el tamaño del tablero y del modo
 de juego. En este caso, los porcentajes tanto de escaleras como
 serpientes, van hasta un máximo de 10% (sumando, en total, un máximo de
 20% por ambos).
 
-![](img/8.png){width="2.097843394575678in"
-height="3.0989588801399823in"}
-![](img/9.png){width="2.211498250218723in"
-height="3.119792213473316in"}
+![](img/8.png)
+![](img/9.png)
 
 Así mismo, la modalidad y el tamaño del tablero, fueron de selección
 múltiple con única opción, como se puede tal que queda de la siguiente
 manera:
 
-![](img/10.png){width="2.182292213473316in"
-height="3.010057961504812in"}
-![](img/11.png){width="2.1894903762029747in"
-height="3.026042213473316in"}
+![](img/10.png)
+![](img/11.png)
 
 En la parte superior de la pantalla de esta interfaz, se tienen una
 opción, la cual es “VOLVER”. Como su nombre lo indica, su función es
@@ -132,8 +121,7 @@ Esta interfaz, será especialmente diseñada por la de opciones. En esta,
 se mostrará el tablero, los jugadores (con su respectivo color) y se
 mostrará el dado que ha sacado al momento de lanzar.
 
-![](img/12.png){width="6.270833333333333in"
-height="3.4583333333333335in"}
+![](img/12.png)
 
 En este caso, la screenshot nos muestra que el tablero generado fue uno
 de tamaño 8x8, con un porcentaje de 10% en total, con 5% de escaleras y
@@ -147,41 +135,31 @@ También, podemos observar que en cada botón, aparece el color del
 jugador, así como el dado que obtuvo. Estos colores y dados están dados
 de la siguiente manera:
 
-![](1.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
-![](2.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
-![](3.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
-![](4.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
-![](5.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
-![](6.png){width="0.3958333333333333in"
-height="0.3958333333333333in"}
+![](1.png)
+![](2.png)
+![](3.png)
+![](4.png)
+![](5.png)
+![](6.png)
 
-![](amarillo.jpg){width="0.4010422134733158in"
-height="0.3958333333333333in"}
-![](morado.jpg){width="0.3958333333333333in"
-height="0.3958333333333333in"}
+![](amarillo.jpg)
+![](morado.jpg)
 
 Cuando un jugador obtiene el 6, podrá lanzar una segunda vez, y así de
 manera sucesiva (N+1 lanzamientos cuando tiene N número de seis).
 
-![](img/13.png){width="3.7291666666666665in"
-height="0.6458333333333334in"}
+![](img/13.png)
 
 Cuando el programa capture a un jugador en la posición final, mostrará
 una alerta diciendo que este ha ganado el juego. Posterior a esto, se
 volverá a la página de opciones.
 
-![](img/14.png){width="4.40625in" height="1.2604166666666667in"}
+![](img/14.png)
 
 En el caso de la modalidad de 1VBOT, el jugador iniciará la partida
 lanzando su dado.
 
-![](img/15.png){width="4.229166666666667in"
-height="1.3229166666666667in"}
+![](img/15.png)
 
 Cuando se presione el dado, y salga el resultado, seguirá el turno del
 bot. Este, estará programado mediante tiempo, y se hará de manera
@@ -189,7 +167,7 @@ automática. El dado del bot será removido una vez el jugador lance el
 dado de nuevo. El turno para el jugador será concebido una vez el bot
 avance.
 
-![](img/16.png){width="3.71875in" height="1.3541666666666667in"}
+![](img/16.png)
 
 En la parte superior de la interfaz de juego, tenemos dos opciones:
 “VOLVER” y “GUARDAR”. En el caso de “VOLVER”, será de ayuda para
@@ -198,8 +176,7 @@ seleccionando alguna opción previamente. En el caso de “GUARDAR”, se
 tendrá la opción de, como su nombre lo dice, guardar mediante una
 descarga el tablero generado.
 
-![](img/17.png){width="6.270833333333333in"
-height="3.3055555555555554in"}
+![](img/17.png)
 
 Ésta por ejemplo, es la descarga que genera el botón “GUARDAR”, del
 tablero de juego. Como se puede notar, sólo hace aparición el tablero de
