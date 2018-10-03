@@ -38,6 +38,8 @@ let averageRolls = 0;    // Promedio a tener en cuenta.
 let avgP;                // Variable auxiliar.
 var t;                   // Tamaño del tablero.
 
+
+
 function setup() 
 {
   if(localStorage.tablero=="8x8")   { createCanvas(480, 480); t=64;  }

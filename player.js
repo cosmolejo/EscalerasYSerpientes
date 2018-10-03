@@ -14,9 +14,9 @@ class Player {
   
   reset() 
   {
-    this.spot = -1; // Posición actual.
-    this.next = -1; // Posición posterior.
-    this.roll = -1; // Posición anterior.
+    this.spot = 0; // Posición actual.
+    this.next = 0; // Posición posterior.
+    this.roll = 0; // Posición anterior.
   }  
   
   // Movimiento entre 1 y 6.
