@@ -1,7 +1,23 @@
 
-// Cada baldosa utilizada en el programa.
+/**
+ * Clase 'Tile' que sirve para representar el entorno gráfico 
+ * del programa mediante sus baldosas
+ * @class
+ * @author Alejandro Mesa Gómez, Hernán Javier Aguilar.
+ */
 
 class Tile {
+
+  /**
+   * Representa una baldosa, la dirección, posición en x, y, 
+   * la anchura y el siguiente.
+   * @constructor
+   * @param {number} x - Posición en x
+   * @param {number} y - Posición en y
+   * @param {number} wh - Tamaño de la anchura
+   * @param {number} index - Índice a trabajar
+   * @param {number} next - Siguiente baldosa
+   */
 
   constructor(x, y, wh, index, next) 
   {
@@ -12,8 +28,6 @@ class Tile {
     this.next = next;
     this.snadder = 0;
 
-    // Coloreando las baldosas.
-    
     if (this.index!=0 && this.index!= t-1 && this.index % 2 == 0)
     { 
       this.color = color(63, 61, 61); 
@@ -32,7 +46,11 @@ class Tile {
     }
   }
   
-  // Encuentra el centro de la baldosa.
+  /**
+   * Ayuda a encontrar el centro de la baldosa
+   * @return {number} cx - Centro en x
+   * @return {number} cy - Centro en y
+   */
 
   getCenter()
   {
@@ -41,7 +59,9 @@ class Tile {
     return [cx, cy];
   } 
   
-  // Dibuja un rectángulo.
+  /**
+   * Dibuja un rectángulo
+   */
 
   show() 
   {
@@ -50,7 +70,9 @@ class Tile {
     rect(this.x, this.y, this.wh, this.wh);
   }
   
-  // Resalta el rectángulo.
+  /**
+   * Resalta el rectángulo
+   */
 
   highlight() 
   {
@@ -59,7 +81,10 @@ class Tile {
     rect(this.x, this.y, this.wh, this.wh);
   }
   
-  // Revisar la baldosa conetada, y si se conecta con una serpiente o escalera.
+  /**
+   * Revisa la baldosa conectada, y si se conecta con una escalera
+   * o con una serpiente.
+   */
 
   showSnadders() 
   {

@@ -5,6 +5,7 @@ const MOVE_STATE = 1; // Movimiento en baldosas.
 const SNADDER_STATE = 2; // Movimiento en escalera o serpiente.
 let state = ROLL_STATE; // Estado del juego.
 
+
 // Estado actual jugador 2.
 
 const ROLL_STATE_P2 = 0; // Tirando el dado.
@@ -12,12 +13,14 @@ const MOVE_STATE_P2 = 1; // Movimiento en baldosas.
 const SNADDER_STATE_P2 = 2; // Movimiento en escalera o serpiente.
 let state2 = ROLL_STATE_P2; // Estado del juego.
 
+
 // Estado actual jugador 3.
 
 const ROLL_STATE_P3 = 0; // Tirando el dado.
 const MOVE_STATE_P3 = 1; // Movimiento en baldosas.
 const SNADDER_STATE_P3 = 2; // Movimiento en escalera o serpiente.
 let state3 = ROLL_STATE_P3; // Estado del juego.
+
 
 // Estado actual bot.
 
@@ -32,14 +35,18 @@ let statebot = ROLL_STATE_BOT; // Estado del juego.
 let tiles = []; // Vector con las baldosas.
 let player; // Jugador con el que basarse.
 let player2;
-let Lista; // Variable para el modelo
+let Lista; // Variable para el modelo.
 let index = 0; // Posición para crear una escalera o serpiente.
 let averageRolls = 0; // Promedio a tener en cuenta.
 let nodo; // Nodo auxiliar.
 var t; // Tamaño del tablero.
 
 
-
+/**
+ * Ayuda a definir el tamaño del tablero, además del modelo lista del juego y
+ * crear las baldosas y sus nodos equivalentes. Calcula el promedio seleccionado por el jugador,
+ * asigna las serpientes y las escaleras y así mismo los jugadores dependiendo de la modalidad.
+ */
 function setup() {
   if (localStorage.tablero == "8x8") {
     createCanvas(480, 480);
@@ -99,13 +106,13 @@ function setup() {
   s = parseInt(localStorage.serpientes);
 
 
-
   // Cálculo del promedio.
 
   var e2 = e / 2;
   var s2 = s / 2;
   var escaleras = ((t * e2) / 100);
   var serpientes = ((t * s2) / 100);
+
 
   // Tomar serpientes de manera aleatoria.
 
@@ -120,6 +127,7 @@ function setup() {
     n.asignaLInd(Lista.retornaNodo(destino));
     console.log(index, Lista.retornaIndex(n));
   }
+
 
   // Tomar escaleras de manera aleatoria.
 
@@ -146,6 +154,15 @@ function setup() {
   }
 
 }
+
+/**
+ * Manejo lógico de los movimientos del jugador dependiendo de la modalidad.
+ * Este método maneja las variables auxiliares de control, para así poder asignar de manera
+ * organizada, los turnos por jugador. Actualiza la posición del jugador, lo mueve y 
+ * finalmente lo dibuja en la baldosa correspondiente. Además, verifica si se está en una
+ * escalera o serpiente para hacer su respectivo movimiento.
+ * Finalmente, revisa 
+ */
 
 function draw() {
   background(51);

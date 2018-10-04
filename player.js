@@ -1,9 +1,19 @@
 
-// Clase jugador.
+/**
+ * Clase 'Player' que sirve para representar a un jugador
+ * y sus acciones en la parte gráfica, y mediante el funcionamiento
+ * con listas.
+ * @class
+ * @author Alejandro Mesa Gómez, Hernán Javier Aguilar.
+ */
 
 class Player {
   
-  // Crear un nuevo jugador.
+  /**
+   * Representa un jugador
+   * @constructor
+   * @param {lista} obj - Modelo de la lista.
+   */
 
   constructor(obj) 
   {
@@ -11,8 +21,11 @@ class Player {
     this.l=obj;
     this.pos=obj.primerNodo();
   }
-
-  // Reiniciar las variables.
+  
+  /**
+   * Reinicia las variables del jugador que se usan para 
+   * el posicionamiento en la parte gráfica.
+   */
   
   reset() 
   {
@@ -21,7 +34,10 @@ class Player {
     this.roll = 0; // valor del dado.
   }  
   
-  // Movimiento entre 1 y 6.
+  /**
+   * Consigue un número aleatorio entre 1 y 6 para hacer
+   * el movimiento de posición (función de lanzar dado).
+   */
 
   rollDice() 
   {
@@ -29,7 +45,10 @@ class Player {
     this.next = this.spot + this.roll;
   }
   
-  // Actualizar posición a la siguiente.
+  /**
+   * Sirve para hacer el movimiento del jugador a la 
+   * siguiente baldosa. (También en la lista).
+   */
 
   move() 
   {
@@ -37,7 +56,9 @@ class Player {
     this.pos=this.l.avanzar(this.roll,this.pos);
   }
   
-  // ¿Posición actual es escalera o serpiente?
+  /**
+   * Verifica si la posición actual es una escalera o una serpiente.
+   */
 
   isSnadder() 
   {
@@ -47,7 +68,9 @@ class Player {
     
   }
   
-  // Moverse si es escalera o serpiente.
+  /**
+   * Se mueve por una escalera o una serpiente si es el caso.
+   */
 
   moveSnadder() 
   {
@@ -55,7 +78,9 @@ class Player {
     this.spot += tile.snadder;
   }
 
-  // Mostrar jugador en la baldosa actual.
+  /**
+   * Muestra al jugador 1 en la baldosa actual.
+   */
 
   show() 
   {
@@ -66,6 +91,10 @@ class Player {
     let center = current.getCenter();
     ellipse(center[0], center[1], 26);
   }
+
+  /**
+   * Muestra al jugador 2 en la baldosa actual.
+   */
 
   show2() 
   {

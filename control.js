@@ -1,3 +1,7 @@
+
+// Declaración de las variables auxiliares que sirven para identificar
+// turnos, y el siguiente en jugar. (Tener un orden para lanzamiento de dados).
+
 var x = 2;
 localStorage.lanzar = x;
 var x2 = 2;
@@ -8,6 +12,10 @@ var x4 = 2;
 localStorage.lanzar4 = x4;
 var turnosV = 1;
 
+/**
+ * Creado para hacer screenshots del tablero generado
+ */
+
 html2canvas(document.body, {
     onrendered(canvas) {
         var link = document.getElementById('download');;
@@ -17,12 +25,17 @@ html2canvas(document.body, {
     }
 });
 
-// Al empezar, se oculta los dados de ambas modalidades.
+// Se llaman a los métodos ocultaDados para que, como dice su
+// nombre, oculten todos los dados de ambas modalidades.
 
 ocultaDados1();
 ocultaDados2();
 ocultaDados3();
 ocultaDados4();
+
+/**
+ * Oculta las imagenes de los dados para el jugador 1.
+ */
 
 function ocultaDados1() {
     document.getElementById('11').style.display = 'none';
@@ -33,6 +46,11 @@ function ocultaDados1() {
     document.getElementById('61').style.display = 'none';
 }
 
+/**
+ * Oculta las imagenes de los dados para el jugador 2.
+ */
+
+
 function ocultaDados2() {
     document.getElementById('12').style.display = 'none';
     document.getElementById('22').style.display = 'none';
@@ -42,6 +60,11 @@ function ocultaDados2() {
     document.getElementById('62').style.display = 'none';
 }
 
+/**
+ * Oculta las imagenes de los dados para el jugador 3.
+ */
+
+
 function ocultaDados3() {
     document.getElementById('13').style.display = 'none';
     document.getElementById('23').style.display = 'none';
@@ -50,6 +73,11 @@ function ocultaDados3() {
     document.getElementById('53').style.display = 'none';
     document.getElementById('63').style.display = 'none';
 }
+
+/**
+ * Oculta las imagenes de los dados para el bot.
+ */
+
 
 function ocultaDados4() {
     document.getElementById('14').style.display = 'none';
@@ -75,7 +103,10 @@ if (localStorage.modalidad == "1VBOT") {
     document.getElementById('amarillo2').style.display = 'none';
 }
 
-// Mover el jugador 1 por medio del botón 1 (Modalidad 1V1).
+
+/**
+ * Mover el jugador 1 por medio del botón 1. (Modalidad 1V1).
+ */
 
 function lanzar() {
     x = 1;
@@ -134,7 +165,9 @@ function lanzar() {
     }
 }
 
-// Mover el jugador 2 por medio del botón 2 (Modalidad 1V1).
+/**
+ * Mover el jugador 2 por medio del botón 2. (Modalidad 1V1).
+ */
 
 function lanzar2() {
     x2 = 1;
@@ -195,7 +228,9 @@ function lanzar2() {
     }
 }
 
-// Mover el jugador 3 por medio del botón 3 (Modalidad 1VBOT).
+/**
+ * Mover el jugador 3 por medio del botón 3. (Modalidad 1VBOT).
+ */
 
 function lanzar3() {
     x3 = 1;
@@ -258,9 +293,9 @@ function lanzar3() {
     
 }
 
-// VERIFICAR EL DADO 6 CON EL TIMER
-
-// Mover al bot por medio del botón 3 (Modalidad 1VBOT).
+/**
+ * Mover al bot por medio del botón 3. (Modalidad 1VBOT).
+ */
 
 function lanzar4() {
     x4 = 1;
@@ -322,7 +357,10 @@ function lanzar4() {
     }
 }
 
-// Nos servirá para intercalar los turnos (Modalidad 1V1).
+
+/**
+ * Intercala los turnos en la modalidad 1V1.
+ */
 
 function turnos() {
     if ((turnosV % 2) == 0) {
@@ -333,6 +371,10 @@ function turnos() {
         document.getElementById('botón1').disabled = false;
     }
 }
+
+/**
+ * Intercala los turnos en la modalidad 1VBOT.
+ */
 
 function turnos2() {
     if ((turnosV % 2) == 0) {
