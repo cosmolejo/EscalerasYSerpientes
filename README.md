@@ -216,3 +216,7 @@ Para las excepciones, se trabajó sobre todo en el ámbito de la interfaz de jue
 -   ¿Es la posición actual una escalera?
 
 -   ¿Es la posición actual una serpiente?
+
+# 5. MANUAL TÉCNICO
+
+En la pestaña del index, al final de la página, se presenta un botón llamado “CLICK AQUÍ PARA VER EL MANUAL”, este; servirá para ver la documentación realizada en jsdoc, que será validada para manual técnico del programa.
